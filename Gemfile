@@ -56,6 +56,6 @@ group :development do
 
   #other gems that could help with debugging
   gem 'pry-rails'
-  gem 'quiet-assets'
+  gem 'quiet_assets'
 end
 
