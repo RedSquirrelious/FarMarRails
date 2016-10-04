@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 #make it prettier
 gem 'awesome_print'
 
+#helps show metrics, works with Rails Panel
+gem 'meta_request'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7'
 # Use sqlite3 as the database for Active Record
@@ -50,5 +53,9 @@ group :development do
   #two gems Jamie recommended for easier debugging
   gem 'better_errors'
   gem 'binding_of_caller'
+
+  #other gems that could help with debugging
+  gem 'pry-rails'
+  gem 'quiet-assets'
 end
 
