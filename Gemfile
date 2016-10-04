@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#make it prettier
+gem 'awesome_print'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7'
@@ -42,6 +44,11 @@ group :development do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+
   gem 'spring'
+
+  #two gems Jamie recommended for easier debugging
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
