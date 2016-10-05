@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+
+  root to: 'vendors#index'
+
   get 'vendors/index' => 'vendors#index'
 
-  get 'vendors/show_vendor' => 'vendors#show'
+  get 'vendors/show_vendor' => 'vendors#show', as: 'show_vendor'
 
   get 'vendors/new_product' => 'vendors#new', as: 'new'
 
