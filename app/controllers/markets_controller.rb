@@ -1,8 +1,14 @@
 class MarketsController < ApplicationController
+  def findMarket
+    return Market.find(params[:id].to_i)
+  end
+
   def index
+    @markets = Markets.all
   end
 
   def show
+    @mymarket = findMarket
   end
 
   def new

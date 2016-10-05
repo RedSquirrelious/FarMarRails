@@ -1,2 +1,11 @@
-<h1>Markets#index</h1>
-<p>Find me in app/views/markets/index.html.erb</p>
+<h1>Choose Your Market</h1>
+
+<% @markets.each do |market| %>
+  <article>
+    <p> <%= market.name %>  </p>
+    <p> <%= button_to "Edit", {action: "edit", id: market.id}, method: :get %></p>
+  </article>
+<% end %>
+<p>
+  <%= button_to "Add Market", {controller: 'markets', action: 'new'}, {path: 'new', method: :get} %>
+</p>
