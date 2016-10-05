@@ -39,33 +39,33 @@ Rails.application.routes.draw do
 
   # root to: 'markets#index'
 
-  get 'markets/index' => 'markets#index', as: 'index'
+  get 'markets/index' => 'markets#index', as: 'market_index'
 
-  get 'markets/show/:id' => 'markets#show', as: 'show'
+  get 'markets/show/:id' => 'markets#show', as: 'market_show'
 
-  get 'markets/new' => 'markets#new', as: 'new'
+  get 'markets/new' => 'markets#new', as: 'market_new'
 
-  post 'markets/create' => 'markets#create', as: 'create'
+  post 'markets/create' => 'markets#create', as: 'market_create'
 
-  get 'markets/:id/edit' => 'markets#edit', as: 'edit'
+  get 'markets/:id/edit' => 'markets#edit', as: 'market_edit'
 
-  put 'markets/:id/update' => 'markets#update', as: 'update'
+  put 'markets/:id/update' => 'markets#update', as: 'market_update'
 
-  delete 'markets/:id/destroy' => 'markets#destroy', as: 'destroy'
+  delete 'markets/:id/destroy' => 'markets#destroy', as: 'market_destroy'
 
-  get 'markets/:id/vendor_index' => 'markets#vendor_index', as: 'vendor_index'
+  get 'markets/:id/vendor_index' => 'markets#vendor_index', as: 'market_vendor_index'
 
-  get 'markets/:id/vendor_show' => 'markets#vendor_show', as: 'vendor_show'
+  get 'markets/:id/vendor_show' => 'markets#vendor_show', as: 'market_vendor_show'
 
-  get 'markets/:id/vendor_new'  => 'markets#vendor_new', as: 'vendor_new'
+  get 'markets/:id/vendor_new'  => 'markets#vendor_new', as: 'market_vendor_new'
 
-  post 'markets/:id/vendor_create' => 'markets#vendor_create', as: 'vendor_create'
+  post 'markets/:id/vendor_create' => 'markets#vendor_create', as: 'market_vendor_create'
 
-  get 'markets/:id/vendor_edit' => 'markets#vendor_edit', as: 'vendor_edit'
+  get 'markets/:id/vendor_edit' => 'markets#vendor_edit', as: 'market_vendor_edit'
 
-  put 'markets/:id/vendor_update' => 'markets#vendor_update', as: 'vendor_update'
+  put 'markets/:id/vendor_update' => 'markets#vendor_update', as: 'market_vendor_update'
 
-  delete 'markets/:id/vendor_destroy' => 'markets#vendor_destroy', as: 'vendor_destroy'
+  delete 'markets/:id/vendor_destroy' => 'markets#vendor_destroy', as: 'market_vendor_destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
