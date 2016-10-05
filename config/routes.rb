@@ -1,4 +1,32 @@
 Rails.application.routes.draw do
+  get 'vendors/index'
+
+  get 'vendors/show_vendor'
+
+  get 'vendors/new_product'
+
+  get 'vendors/create_product'
+
+  get 'vendors/show_product'
+
+  get 'vendors/show_all_products'
+
+  get 'vendors/update_product'
+
+  get 'vendors/edit_product'
+
+  get 'vendors/delete_product'
+
+  get 'vendors/new_sale'
+
+  get 'vendors/create_sale'
+
+  get 'vendors/show_sale'
+
+  get 'vendors/show_all_sales'
+
+  get 'vendors/total_sales'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

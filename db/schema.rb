@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20161005171938) do
 
   create_table "market_vendor_cleans", force: :cascade do |t|
