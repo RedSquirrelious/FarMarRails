@@ -58,7 +58,7 @@ class VendorsController < ApplicationController
     end
   end
 
-  def delete_product
+  def destroy_product
     @myproduct = find_product
      
     if @myproduct != nil
