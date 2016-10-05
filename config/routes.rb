@@ -1,31 +1,40 @@
 Rails.application.routes.draw do
-  get 'vendors/index'
 
-  get 'vendors/show_vendor'
+  root to: 'vendors#index'
 
-  get 'vendors/new_product'
+  get 'vendors/index' => 'vendors#index'
 
-  get 'vendors/create_product'
+  get 'vendors/:id/show_vendor' => 'vendors#show_vendor', as: 'show_vendor'
 
-  get 'vendors/show_product'
+  get 'vendors/new_product' => 'vendors#new', as: 'new'
 
-  get 'vendors/show_all_products'
+  get 'vendors/create_product' => 'vendors#create'
 
-  get 'vendors/update_product'
+  post 'vendors/create_product' => 'vendors#create', as: 'create'
 
-  get 'vendors/edit_product'
+  get 'vendors/:id/show_product' => 'vendors#show_product', as: 'show_product'
 
-  get 'vendors/delete_product'
+  get 'vendors/show_all_products' => 'vendors#show_all_products', as: 'show_all_products'
 
-  get 'vendors/new_sale'
+  get 'vendors/:id/update_product' => 'vendors#update_product'
 
-  get 'vendors/create_sale'
+  get 'vendors/:id/edit_product' => 'vendors#edit_product'
 
-  get 'vendors/show_sale'
+  patch 'vendors/:id/edit_product' => 'vendors#edit_product', as: 'edit_product'
 
-  get 'vendors/show_all_sales'
+  delete 'vendors/destroy_product' => 'vendors#destroy_product', as: 'destroy_product'
 
-  get 'vendors/total_sales'
+  get 'vendors/new_sale' => 'vendors#new_sale'
+
+  get 'vendors/create_sale' => 'vendors#create_sale'
+
+  post 'vendors/create_sale' => 'vendors#create_sale'
+
+  get 'vendors/show_sale' => 'vendors#show_sale'
+
+  get 'vendors/show_all_sales' => 'vendors#show_all_sales'
+
+  get 'vendors/total_sales' => 'vendors#total_sales'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
