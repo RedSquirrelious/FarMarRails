@@ -87,6 +87,7 @@ class MarketsController < ApplicationController
   def vendor_show
     @myvendor = findVendor
     @vendor_products = @myvendor.products
+    @vendor_markets = @myvendor.markets
   end
 
   def vendor_new
