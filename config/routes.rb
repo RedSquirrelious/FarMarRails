@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'vendors/index' => 'vendors#index'
 
-  get 'vendors/show_vendor' => 'vendors#show', as: 'show_vendor'
+  get 'vendors/:id/show_vendor' => 'vendors#show_vendor', as: 'show_vendor'
 
   get 'vendors/new_product' => 'vendors#new', as: 'new'
 
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   post 'vendors/create_product' => 'vendors#create', as: 'create'
 
-  get 'vendors/show_product' => 'vendors#show_product', as: 'show_product'
+  get 'vendors/:id/show_product' => 'vendors#show_product', as: 'show_product'
 
   get 'vendors/show_all_products' => 'vendors#show_all_products', as: 'show_all_products'
 
