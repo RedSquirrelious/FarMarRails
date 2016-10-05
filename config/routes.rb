@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 
   post 'vendors/create_product' => 'vendors#create', as: 'create'
 
-  get 'vendors/show_product' => 'products#show_product', as: 'show_product'
+  get 'vendors/show_product' => 'vendors#show_product', as: 'show_product'
 
-  get 'vendors/show_all_products' => 'products#show_all_products', as: 'show_all_products'
+  get 'vendors/show_all_products' => 'vendors#show_all_products', as: 'show_all_products'
 
   get 'vendors/:id/update_product' => 'vendors#update_product'
 
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   patch 'vendors/:id/edit_product' => 'vendors#edit_product', as: 'edit_product'
 
-  delete 'vendors/delete_product' => 'vendors#delete_product', as: 'delete_product'
+  delete 'vendors/destroy_product' => 'vendors#destroy_product', as: 'destroy_product'
 
   get 'vendors/new_sale' => 'vendors#new_sale'
 
