@@ -1,4 +1,4 @@
 class MarketVendorClean < ActiveRecord::Base
-  belongs_to :markets
-  belongs_to :vendors
+  belongs_to :market
+  belongs_to :vendor
 end

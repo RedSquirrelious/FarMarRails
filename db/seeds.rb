@@ -17,5 +17,5 @@ CSV.foreach('seed_csvs/vendors.csv', :headers => true) do |csv_obj|
 end
 
 CSV.foreach('seed_csvs/market_vendors_clean.csv', :headers => false) do |csv_obj|
-  MarketVendor.create(market_id: csv_obj[0], vendor_id: csv_obj[1])
+  MarketVendorClean.create(market_id: csv_obj[0], vendor_id: csv_obj[1])
 end
