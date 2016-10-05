@@ -3,8 +3,12 @@ class VendorsController < ApplicationController
     @vendors = Vendor.all
   end
 
+  def find_vendor
+    return Vendor.find(params[:id].to_i)
+  end
+
   def show_vendor
-    @myvendor = Vendor.find(params[:id].to_i)
+    @myvendor = find_vendor
   end
 
   def new_product
@@ -31,6 +35,7 @@ class VendorsController < ApplicationController
   end
 
   def show_all_products
+    @myvendor = find_vendor
     @products = @myvendor.products
     return @products
   end
