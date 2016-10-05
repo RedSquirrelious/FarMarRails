@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161004221805) do
+ActiveRecord::Schema.define(version: 20161005000518) do
+
+  create_table "market_vendor_cleans", force: :cascade do |t|
+    t.integer  "markets_id"
+    t.integer  "vendors_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "market_vendor_cleans", ["markets_id"], name: "index_market_vendor_cleans_on_markets_id"
+  add_index "market_vendor_cleans", ["vendors_id"], name: "index_market_vendor_cleans_on_vendors_id"
 
   create_table "market_vendors", force: :cascade do |t|
     t.integer  "markets_id"
