@@ -4,11 +4,12 @@ class MarketsController < ApplicationController
   end
 
   def index
-    @markets = Markets.all
+    @markets = Market.all
   end
 
   def show
     @mymarket = findMarket
+    @market_vendors = @mymarket.vendors
   end
 
   def new

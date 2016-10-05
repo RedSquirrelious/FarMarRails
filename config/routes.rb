@@ -14,19 +14,19 @@ Rails.application.routes.draw do
 
   get 'markets/:id/destroy' => 'markets#destroy', as: 'destroy'
 
-  get 'markets/:id/vendor_index' => 'markets#vendor_index', as: 'vendorindex'
+  get 'markets/:id/vendor_index' => 'markets#vendor_index', as: 'vendor_index'
 
-  get 'markets/:id/vendor_show' => 'markets#vendor_show', as: 'vendorshow'
+  get 'markets/:id/vendor_show' => 'markets#vendor_show', as: 'vendor_show'
 
-  get 'markets/:id/vendor_new'  => 'markets#vendor_new', as: 'vendornew'
+  get 'markets/:id/vendor_new'  => 'markets#vendor_new', as: 'vendor_new'
 
-  post 'markets/:id/vendor_create' => 'markets#vendor_update', as: 'vendorupdate'
+  post 'markets/:id/vendor_create' => 'markets#vendor_create', as: 'vendor_create'
 
-  get 'markets/:id/vendor_edit' => 'markets#vendor_edit', as: 'vendoredit'
+  get 'markets/:id/vendor_edit' => 'markets#vendor_edit', as: 'vendor_edit'
 
-  put 'markets/:id/vendor_update' => 'markets#vendor_update', as: 'vendorupdate'
+  put 'markets/:id/vendor_update' => 'markets#vendor_update', as: 'vendor_update'
 
-  get 'markets/:id/vendor_destroy' => 'markets#vendor_destroy', as: 'vendordestroy'
+  delete 'markets/:id/vendor_destroy' => 'markets#vendor_destroy', as: 'vendor_destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

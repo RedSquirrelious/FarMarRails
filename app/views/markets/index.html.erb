@@ -2,7 +2,7 @@
 
 <% @markets.each do |market| %>
   <article>
-    <p> <%= market.name %>  </p>
+    <h2> <%= link_to( market.name, show_path(market.id) ) %>  </h2>
     <p> <%= button_to "Edit", {action: "edit", id: market.id}, method: :get %></p>
   </article>
 <% end %>
