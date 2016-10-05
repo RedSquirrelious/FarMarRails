@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20161005171938) do
 
   create_table "market_vendor_cleans", force: :cascade do |t|
@@ -22,6 +23,9 @@ ActiveRecord::Schema.define(version: 20161005171938) do
 
   add_index "market_vendor_cleans", ["market_id"], name: "index_market_vendor_cleans_on_market_id"
   add_index "market_vendor_cleans", ["vendor_id"], name: "index_market_vendor_cleans_on_vendor_id"
+=======
+ActiveRecord::Schema.define(version: 20161005002316) do
+>>>>>>> fe06481ec20490d788eae1ee45dd70bd1ffe52e2
 
   create_table "market_vendors", force: :cascade do |t|
     t.integer  "markets_id"
@@ -42,6 +46,22 @@ ActiveRecord::Schema.define(version: 20161005171938) do
     t.string   "zip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "vendor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.integer  "amount"
+    t.datetime "purchase_time"
+    t.integer  "vendor_id"
+    t.integer  "product_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "vendors", force: :cascade do |t|
