@@ -6,6 +6,8 @@
   <p> <%= @mymarket.county %>  </p>
   <p> <%= @mymarket.state %>  </p>
   <p> <%= @mymarket.zip %>  </p>
+  <p> <%= button_to "Edit", {action: "edit", id: @mymarket.id}, method: :get %></p>
+  <p> <%= button_to "Delete", {action: "destroy", id: @mymarket.id}, method: :delete %></p>
 </article>
 
 <article>
