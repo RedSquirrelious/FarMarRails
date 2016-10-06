@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'product_search/meat_search' => 'product_search#meat_search', as: 'meat_search'
 
-  get 'product_search/baked_goods_search' => 'product_search#baked_goods_search', as: 'baked_goods_search'
+  get 'product_search/carbs_search' => 'product_search#carbs_search', as: 'carbs_search'
 
 
   root to: 'landing#index'
