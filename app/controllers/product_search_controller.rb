@@ -32,11 +32,19 @@ class ProductSearchController < ApplicationController
   	end.flatten
 
   	@veggie_search = Market.joins(:vendors).merge(Vendor.joins(:products).merge(Product.where(id: veggie_array.map(&:id)))).distinct
-  
-  	# raise
 
   end
 
+  def seafood_search
+  	seafood = ['fish', 'salmon']
+
+  	seafood_array = seafood.map do |v|
+  		define_type(v)
+  	end.flatten
+
+  	@seafood_search = Market.joins(:vendors).merge(Vendor.joins(:products).merge(Product.where(id: seafood_array.map(&:id)))).distinct
+
+  end
 
 end
 
