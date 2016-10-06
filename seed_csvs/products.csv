@@ -51,7 +51,7 @@ id,name,vendor_id
 50,Quaint Bread,17
 51,Successful Apples,18
 52,Sticky Fish,18
-53,â€“ Bread,18
+53,Cheerful Bread,18
 54,Miniature Beets,18
 55,Delightful Chicken,19
 56,Nom nom Beef,19
@@ -131,7 +131,7 @@ id,name,vendor_id
 130,Bitter Pretzel,40
 131,Tasteless Greens,40
 132,Sharp Chicken,41
-133,â€“ Fish,41
+133,Cheerful Fish,41
 134,High Fish,41
 135,Bland Apples,41
 136,Pretty Fruit,42
@@ -276,7 +276,7 @@ id,name,vendor_id
 275,Lonely Honey,92
 276,Edible Mushrooms,92
 277,Steep Burrito,93
-278,â€“ Mushrooms,94
+278,Cheerful Mushrooms,94
 279,Terrible Fruit,95
 280,Rotten Fruit,95
 281,Ugly Bread,95
@@ -340,7 +340,7 @@ id,name,vendor_id
 339,Victorious Carrots,114
 340,Melted Honey,114
 341,Calm Burrito,115
-342,â€“ Apples,115
+342,Cheerful Apples,115
 343,Weak Greens,115
 344,Cooperative Beef,116
 345,Tasteless Greens,116
@@ -370,7 +370,7 @@ id,name,vendor_id
 369,Early Pretzel,125
 370,Empty Honey,126
 371,Dull Bread,127
-372,â€“ Fruit,127
+372,Cheerful Fruit,127
 373,Righteous Beef,127
 374,Big Beets,127
 375,Grand Burrito,127
@@ -398,7 +398,7 @@ id,name,vendor_id
 397,Shivering Pretzel,136
 398,Purring Greens,138
 399,Selfish Burrito,138
-400,â€“ Honey,138
+400,Cheerful Honey,138
 401,Brave Bread,138
 402,Bland Pretzel,138
 403,Curly Burrito,139
@@ -485,7 +485,7 @@ id,name,vendor_id
 484,Fat Burrito,164
 485,Depressed Pretzel,164
 486,Sad Carrots,165
-487,â€“ Honey,165
+487,Cheerful Honey,165
 488,Fine Beef,165
 489,Cuddly Fish,165
 490,Rainy Fish,165
@@ -580,7 +580,7 @@ id,name,vendor_id
 579,Giant Beef,197
 580,Pleasant Bread,197
 581,Upset Carrots,197
-582,â€“ Honey,198
+582,Cheerful Honey,198
 583,Frantic Beef,198
 584,Tall Pretzel,198
 585,Whispering Chicken,198
@@ -728,7 +728,7 @@ id,name,vendor_id
 727,Cruel Mushrooms,249
 728,Screeching Apples,249
 729,Gentle Honey,250
-730,â€“ Carrots,250
+730,Cheerful Carrots,250
 731,Tasteless Fish,250
 732,Thoughtful Honey,250
 733,Green Bread,251
@@ -830,7 +830,7 @@ id,name,vendor_id
 829,Boiling Burrito,286
 830,Defeated Honey,287
 831,Cheerful Greens,287
-832,â€“ Bread,287
+832,Cheerful Bread,287
 833,Striped Burrito,287
 834,Selfish Fruit,288
 835,Few Greens,289
@@ -999,7 +999,7 @@ id,name,vendor_id
 998,Clumsy Honey,350
 999,Loud Pretzel,351
 1000,Stale Beef,351
-1001,â€“ Chicken,351
+1001,Cheerful Chicken,351
 1002,Excited Apples,351
 1003,Thoughtful Greens,351
 1004,Average Mushrooms,352
@@ -1113,7 +1113,7 @@ id,name,vendor_id
 1112,Terrible Fruit,388
 1113,Purple Burrito,388
 1114,Prickly Pretzel,389
-1115,â€“ Apples,390
+1115,Cheerful Apples,390
 1116,Straight Chicken,390
 1117,Embarrassed Beef,390
 1118,Swift Fish,390
@@ -1167,7 +1167,7 @@ id,name,vendor_id
 1166,Proud Apples,406
 1167,Embarrassed Fish,408
 1168,Shaggy Mushrooms,409
-1169,â€“ Burrito,410
+1169,Cheerful Burrito,410
 1170,Salty Honey,410
 1171,Squealing Bread,410
 1172,Raspy Carrots,411
