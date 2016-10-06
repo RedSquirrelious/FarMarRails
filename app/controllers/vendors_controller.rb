@@ -42,8 +42,15 @@ class VendorsController < ApplicationController
     @myproduct = Product.new
     @myproduct.name = params[:product][:name]
     @myproduct.vendor_id = @myvendor.id
-    @myproduct.save
-    redirect_to show_vendor_path
+
+    if @myproduct.save
+      redirect_to show_vendor(@myvendor.id)
+    else
+      @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
+      @post_method = :post
+      @post_path = update_product_path
+      render :new_product
+    end
   end
 
   def find_product
@@ -73,9 +80,15 @@ class VendorsController < ApplicationController
 
     @myproduct.name = params[:product][:name]
 
-    @myproduct.save
-      redirect_to show_vendor_path
 
+    if @myproduct.save
+      redirect_to show_vendor(@myvendor.id)
+    else
+      @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
+      @post_method = :post
+      @post_path = update_product_path
+      render :edit_product
+    end
   end
 
   def edit_product
@@ -102,16 +115,29 @@ class VendorsController < ApplicationController
 
   def new_sale
     @mysale = Sale.new
+    @myproduct = find_product
+
+    @post_method = :post
+    @post_path = vendor_create_sale_path
   end
 
   def create_sale
     @params = params
+    @myproduct = find_product
     @mysale = Sale.new
-    @sale_date = params[:purchase_date]
-    @sale_product_name = params[:product_name]
-    @sale_amount = params[:amount]
-    @mysale.save
-    redirect_to show_vendor
+    @mysale.purchase_time = DateTime.now
+    @mysale.amount = params[:sale][:amount]
+    @mysale.product_id = @myproduct.id
+    @mysale.vendor_id = @myproduct.vendor_id
+
+    if @mysale.save
+      redirect_to show_vendor_path(@mysale.vendor_id) 
+    else
+      @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
+      @post_method = :post
+      @post_path = vendor_create_sale_path
+      render :new_sale
+    end
   end
 
   def find_sale

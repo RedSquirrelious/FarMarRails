@@ -26,11 +26,11 @@ Rails.application.routes.draw do
 
   delete 'vendors/:id/:product_id/destroy_product' => 'vendors#destroy_product', as: 'destroy_product'
 
-  get 'vendors/new_sale' => 'vendors#new_sale'
+  get 'vendors/:id/show_product/:product_id/new_sale' => 'vendors#new_sale', as: 'vendor_new_sale'
 
-  get 'vendors/:id/products/:id/create_sale' => 'vendors#create_sale'
+  # get 'vendors/:id/products/:id/create_sale' => 'vendors#create_sale'
 
-  post 'vendors/:id/products/:id/create_sale' => 'vendors#create_sale', as: 'vendor_create_sale'
+  post 'vendors/:id/products/:product_id/create_sale' => 'vendors#create_sale', as: 'vendor_create_sale'
 
   get 'vendors/:id/products/:show_sale' => 'vendors#show_sale'
 
