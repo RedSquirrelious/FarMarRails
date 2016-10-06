@@ -23,16 +23,6 @@ ActiveRecord::Schema.define(version: 20161005171938) do
   add_index "market_vendor_cleans", ["market_id"], name: "index_market_vendor_cleans_on_market_id"
   add_index "market_vendor_cleans", ["vendor_id"], name: "index_market_vendor_cleans_on_vendor_id"
 
-  create_table "market_vendors", force: :cascade do |t|
-    t.integer  "markets_id"
-    t.integer  "vendors_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "market_vendors", ["markets_id"], name: "index_market_vendors_on_markets_id"
-  add_index "market_vendors", ["vendors_id"], name: "index_market_vendors_on_vendors_id"
-
   create_table "markets", force: :cascade do |t|
     t.string   "name"
     t.string   "street"
