@@ -1,7 +1,11 @@
-<h1>Find Your Product!</h1>
+<%= render partial: 'productsearchform' %>
 
 
 <p>Vegetables: <% @veggie_search.each do |v|%>
 	<p><%= v.name %></p>
 	<% end %>
 	</p>
+
+<p><%= link_to("Vegetables", veggie_search_path) %></p>
+
+<p><%= link_to("Seafood", seafood_search_path) %></p>
