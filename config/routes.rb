@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   get 'product_search/index'
 
-  get 'product_search/show'
+  get 'product_search/show' => 'product_search#show', as: 'product_search'
 
   root to: 'landing#index'
 
