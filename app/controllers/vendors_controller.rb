@@ -6,10 +6,26 @@ class VendorsController < ApplicationController
   def find_vendor
     return Vendor.find(params[:id].to_i)
   end
+  def find_market
+    return Market.find(params[:id].to_i)
+  end
 
   def show_vendor
     @myvendor = find_vendor
     show_all_products
+    @allsales = @myvendor.sales
+
+    @total_sales = 0
+    @allsales.each do |sale|
+      @total_sales += sale.amount
+    end
+
+    @markets = @myvendor.markets
+  end
+
+  def show_market_from_vendor
+    @mymarket = find_market
+    @market_vendors = @mymarket.vendors
   end
 
   def new_product
@@ -107,7 +123,13 @@ class VendorsController < ApplicationController
   end
 
   def show_all_sales
-    @sales = @myvendor.sales
+    @myvendor = find_vendor
+    @allsales = @myvendor.sales
+
+    @total_sales = 0
+    @allsales.each do |sale|
+      @total_sales += sale.amount
+    end
   end
 
   def total_sales
