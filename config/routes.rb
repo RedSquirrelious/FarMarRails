@@ -26,19 +26,19 @@ Rails.application.routes.draw do
 
   put 'vendors/:id/update_product/:product_id' => 'vendors#update_product', as: 'update_product'
 
+  get 'vendors/show_market_from_vendor/:id' => 'vendors#show_market_from_vendor', as: 'show_market_from_vendor'
 
+  delete 'vendors/:id/:product_id/destroy_product' => 'vendors#destroy_product', as: 'destroy_product'
 
-  delete 'vendors/destroy_product' => 'vendors#destroy_product', as: 'destroy_product'
+  get 'vendors/:id/show_product/:product_id/new_sale' => 'vendors#new_sale', as: 'vendor_new_sale'
 
-  get 'vendors/new_sale' => 'vendors#new_sale'
+  # get 'vendors/:id/products/:id/create_sale' => 'vendors#create_sale'
 
-  get 'vendors/:id/products/:id/create_sale' => 'vendors#create_sale'
-
-  post 'vendors/:id/products/:id/create_sale' => 'vendors#create_sale', as: 'vendor_create_sale'
+  post 'vendors/:id/products/:product_id/create_sale' => 'vendors#create_sale', as: 'vendor_create_sale'
 
   get 'vendors/:id/products/:show_sale' => 'vendors#show_sale'
 
-  get 'vendors/show_all_sales' => 'vendors#show_all_sales'
+  get 'vendors/:id/show_all_sales' => 'vendors#show_all_sales', as: 'show_all_sales'
 
   get 'vendors/total_sales' => 'vendors#total_sales'
 

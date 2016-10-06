@@ -1,15 +1,11 @@
-<% render partial 'vendor_header_form' %>
+<h1><%= Vendor.find(@myproduct.vendor_id).name %></h1>
+<h3> Product: <%= @myproduct.name %></h3>
+
 
 <%= form_for @mysale, method: @post_method, url: @post_path do |f| %>
-
-	<%= f.label :purchase_time %>
-	<%= f.date_field :purchase_time %>
 
 	<%= f.label :amount %>
 	<%= f.text_field :amount %>
 
 	<%= f.submit %>
 <% end %>
-
-
-
