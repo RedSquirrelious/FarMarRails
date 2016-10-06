@@ -1,6 +1,7 @@
 <%= render partial: "vendor_header_form" %>
 
-<%= form_for @myproduct, method: @post_method, url: @update_product_path do |f| %>
+<%= @myproduct.name %>
+<%= form_for @myproduct, method: @post_method, url: @post_path do |f| %>
 	<%= f.label :name %>
 	<%= f.text_field :name %>
 
