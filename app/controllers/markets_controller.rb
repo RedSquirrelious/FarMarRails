@@ -125,5 +125,6 @@ class MarketsController < ApplicationController
   end
 
   def vendor_destroy
+    
   end
 end
