@@ -13,7 +13,7 @@
 <article>
   <h3> Vendors: </h3>
   <% @market_vendors.each do |vendor| %>
-    <p>  <%= link_to(vendor.name, vendor_show_path(vendor.id)) %>  </p>
+    <p>  <%= link_to(vendor.name, market_vendor_show_path(vendor.id)) %>  </p>
   <% end %>
-  <p><%= button_to "Add Vendor", {controller: 'markets', action: 'vendor_new'}, {path: 'vendor_new', method: :get} %></p>
+  <p><%= button_to "Add Vendor", {controller: 'markets', action: 'vendor_new'}, {path: 'market_vendor_new', method: :get} %></p>
 </article>

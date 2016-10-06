@@ -1,2 +1,19 @@
-<h1>Markets#vendor_show</h1>
-<p>Find me in app/views/markets/vendor_show.html.erb</p>
+<h1> <%= @myvendor.name %></h1>
+
+<article>
+  <h3> Product Offerings: </h3>
+  <% @vendor_products.each do |product| %>
+  	<article>
+  		<p><%= product.name %></p>
+  	</article>
+  <% end %>
+</article>
+
+<article>
+  <h3> Attended Markets: </h3>
+  <% @vendor_markets.each do |market| %>
+    <article>
+      <p><%= market.name %></p>
+    </article>
+  <% end %>
+</article>

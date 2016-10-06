@@ -34,6 +34,22 @@ ActiveRecord::Schema.define(version: 20161005171938) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "vendor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.integer  "amount"
+    t.datetime "purchase_time"
+    t.integer  "vendor_id"
+    t.integer  "product_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "vendors", force: :cascade do |t|
     t.string   "name"
     t.integer  "num_employees"

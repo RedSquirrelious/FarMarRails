@@ -19,7 +19,7 @@ class MarketsController < ApplicationController
   def new
     @mymarket = Market.new
     @post_method = :post
-    @post_path = create_path
+    @post_path = market_create_path
   end
 
   def create
@@ -33,11 +33,11 @@ class MarketsController < ApplicationController
     @mymarket.zip = params[:market][:zip]
 
     if @mymarket.save
-      redirect_to root_path
+      redirect_to market_index_path
     else
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :post
-      @post_path = create_path
+      @post_path = market_create_path
       render :new
     end
   end
@@ -45,7 +45,7 @@ class MarketsController < ApplicationController
   def edit
     @mymarket = findMarket
     @post_method = :put
-    @post_path = update_path
+    @post_path = market_update_path
   end
 
   def update
@@ -64,11 +64,11 @@ class MarketsController < ApplicationController
 
     # @mymarket.save!
     if @mymarket.save
-      redirect_to root_path
+      redirect_to market_index_path
     else
       @error = "Did not save successfully. Try again."
       @post_method = :put
-      @post_path = update_path
+      @post_path = market_update_path
       render :edit
     end
   end
@@ -77,7 +77,7 @@ class MarketsController < ApplicationController
     @mymarket = findMarket
     if @mymarket != nil
       @mymarket.destroy
-      redirect_to root_path
+      redirect_to market_index_path
     end
   end
 
@@ -87,12 +87,35 @@ class MarketsController < ApplicationController
   def vendor_show
     @myvendor = findVendor
     @vendor_products = @myvendor.products
+    @vendor_markets = @myvendor.markets
   end
 
   def vendor_new
+    @mymarket = findMarket
+    @myvendor = Vendor.new
+    @post_method = :post
+    @post_path = market_vendor_create_path
   end
 
   def vendor_create
+    @mymarket = findMarket
+    @params = params
+    @myvendor = Vendor.new
+    @myvendor.name = params[:vendor][:name]
+    @myvendor.num_employees = params[:vendor][:num_employees]
+
+    if @myvendor.save
+      @market_vendor_join = MarketVendorClean.new
+      @market_vendor_join.market_id = @mymarket.id
+      @market_vendor_join.vendor_id = @myvendor.id
+      @market_vendor_join.save
+      redirect_to market_show_path
+    else
+      @error = "Did not save successfully. Try again."
+      @post_method = :post
+      @post_path = market_vendor_update_path
+      render :new
+    end
   end
 
   def vendor_edit
