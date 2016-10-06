@@ -2,9 +2,7 @@
 
 <% @products.each do |product| %>
 	<article>
-<!-- 		<h3><%= link_to( product.name, show_product_path(@myvendor.id, product.id)) %></h3> -->
-
-<h3><%= product.name %></h3>
+	<h3><%= link_to( product.name, show_product_path(@myvendor.id, product.id)) %></h3>
 	</article>
 <% end %>
 

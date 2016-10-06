@@ -44,28 +44,30 @@ class VendorsController < ApplicationController
   def update_product
     @myvendor = find_vendor
     @myproduct = find_product
+    @post_path = update_product_path
 
     # if @myproduct == nil
     #       render :file => 'public/404.html',
     #           :status => :not_found
     # end
 
-    # @myproduct.name = params[:name]
+    @myproduct.name = params[:product][:name]
     
-    # @myproduct.save
-      # redirect_to show_vendor_path
+    @myproduct.save
+      redirect_to show_vendor_path
     
   end
 
   def edit_product
+    @myvendor = find_vendor
     @myproduct = find_product
     @post_method = :put
     @post_path = update_product_path
     
-    # if @myproduct == nil
-    #       render :file => 'public/404.html',
-    #           :status => :not_found
-    # end
+    if @myproduct == nil
+          render :file => 'public/404.html',
+              :status => :not_found
+    end
   end
 
   def destroy_product
