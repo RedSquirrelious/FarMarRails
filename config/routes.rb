@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  
+
   root to: 'landing#index'
 
-  get 'landing/index' => 'landing#index'
+  get 'landing/index' => 'landing#index', as: 'landing'
 
 
   get 'vendors/index' => 'vendors#index', as: 'vendor_index'
