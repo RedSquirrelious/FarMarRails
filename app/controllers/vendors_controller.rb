@@ -13,18 +13,21 @@ class VendorsController < ApplicationController
   end
 
   def new_product
+    @myvendor = find_vendor
     @myproduct = Product.new
     @product_creation_method = "post"
     @post_method = :post
-    @post_path = product_create_path
+    @post_path = create_product_path
   end
 
   def create_product
+    @myvendor = find_vendor
     @params = params
     @myproduct = Product.new
-    @product_name = params[:name]
+    @myproduct.name = params[:product][:name]
+    @myproduct.vendor_id = @myvendor.id
     @myproduct.save
-    redirect_to show_vendor
+    redirect_to show_vendor_path
   end
 
   def find_product
