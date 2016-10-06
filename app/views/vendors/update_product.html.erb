@@ -1,2 +1,5 @@
-<h1>Vendors#update_product</h1>
-<p>Find me in app/views/vendors/update_product.html.erb</p>
+<%= render partial: 'vendor_header_form', locals: {action_name: "show_product"} %>
+
+<%= @myproduct.name %>
+
+<%= render partial: 'productform', locals: {action_name: "edit_product"} %>
