@@ -27,7 +27,7 @@ class VendorsController < ApplicationController
   end
 
   def find_product
-    return Product.find(params[:id].to_i)
+    return Product.find_by_vendor_id(params[:id].to_i)
   end
 
   def show_product
@@ -36,7 +36,7 @@ class VendorsController < ApplicationController
 
   def show_all_products
     @myvendor = find_vendor
-    @products = @myvendor.products
+    @products = Product.where(vendor_id: @myvendor.id )
     return @products
   end
 
