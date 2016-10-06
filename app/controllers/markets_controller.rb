@@ -91,9 +91,31 @@ class MarketsController < ApplicationController
   end
 
   def vendor_new
+    @mymarket = findMarket
+    @myvendor = Vendor.new
+    @post_method = :post
+    @post_path = market_vendor_create_path
   end
 
   def vendor_create
+    @mymarket = findMarket
+    @params = params
+    @myvendor = Vendor.new
+    @myvendor.name = params[:vendor][:name]
+    @myvendor.num_employees = params[:vendor][:num_employees]
+
+    if @myvendor.save
+      @market_vendor_join = MarketVendorClean.new
+      @market_vendor_join.market_id = @mymarket.id
+      @market_vendor_join.vendor_id = @myvendor.id
+      @market_vendor_join.save
+      # redirect_to market_show_path
+    else
+      @error = "Did not save successfully. Try again."
+      @post_method = :post
+      @post_path = market_vendor_update_path
+      render :new
+    end
   end
 
   def vendor_edit
