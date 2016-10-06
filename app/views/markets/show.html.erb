@@ -7,7 +7,7 @@
   <p> <%= @mymarket.state %>  </p>
   <p> <%= @mymarket.zip %>  </p>
   <p> <%= button_to "Edit", market_edit_path(@mymarket.id), method: :get %></p>
-  <p> <%= button_to "Delete", {action: "destroy", id: @mymarket.id}, method: :delete %></p>
+  <p> <%= button_to "Delete", {action: "destroy", id: @mymarket.id}, method: :delete, data: {confirm: "Are you sure?"} %></p>
 </article>
 
 <article>
