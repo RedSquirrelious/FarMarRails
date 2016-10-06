@@ -4,6 +4,15 @@ Rails.application.routes.draw do
 
   get 'product_search/show' => 'product_search#show', as: 'product_search'
 
+  get 'product_search/veggie_search' => 'product_search#veggie_search', as: 'veggie_search'
+
+  get 'product_search/seafood_search' => 'product_search#seafood_search', as: 'seafood_search'
+
+  get 'product_search/meat_search' => 'product_search#meat_search', as: 'meat_search'
+
+  get 'product_search/baked_goods_search' => 'product_search#baked_goods_search', as: 'baked_goods_search'
+
+
   root to: 'landing#index'
 
   get 'landing/index' => 'landing#index'
@@ -77,6 +86,8 @@ Rails.application.routes.draw do
   put 'markets/:id/:vendor_id/vendor_update' => 'markets#vendor_update', as: 'market_vendor_update'
 
   delete 'markets/:id/:vendor_id/vendor_destroy' => 'markets#vendor_destroy', as: 'market_vendor_destroy'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
