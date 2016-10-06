@@ -1,35 +1,38 @@
 Rails.application.routes.draw do
   root to: 'vendors#index'
 
-  get 'vendors/index' => 'vendors#index'
+  get 'vendors/index' => 'vendors#index', as: 'vendor_index'
 
-  get 'vendors/:id/show_vendor' => 'vendors#show_vendor', as: 'show_vendor'
+  get 'vendors/show_vendor/:id' => 'vendors#show_vendor', as: 'show_vendor'
 
-  get 'vendors/new_product' => 'vendors#new', as: 'new'
+  get 'vendors/new_product' => 'vendors#new'
 
   get 'vendors/create_product' => 'vendors#create'
 
-  post 'vendors/create_product' => 'vendors#create', as: 'create'
+  post 'vendors/create_product' => 'vendors#create', as: 'create_product'
 
-  get 'vendors/:id/show_product' => 'vendors#show_product', as: 'show_product'
+  get 'vendors/:id/show_product/:product_id' => 'vendors#show_product', as: 'show_product'
 
   get 'vendors/show_all_products' => 'vendors#show_all_products', as: 'show_all_products'
 
-  get 'vendors/:id/update_product' => 'vendors#update_product'
 
-  get 'vendors/:id/edit_product' => 'vendors#edit_product'
+  get 'vendors/:id/update_product/:product_id' => 'vendors#update_product'
 
-  patch 'vendors/:id/edit_product' => 'vendors#edit_product', as: 'edit_product'
+  get 'vendors/:id/edit_product/:product_id' => 'vendors#edit_product', as: 'edit_product'
+
+  post 'vendors/:id/update_product/:product_id' => 'vendors#update_product', as: 'update_product'
+
+
 
   delete 'vendors/destroy_product' => 'vendors#destroy_product', as: 'destroy_product'
 
   get 'vendors/new_sale' => 'vendors#new_sale'
 
-  get 'vendors/create_sale' => 'vendors#create_sale'
+  get 'vendors/:id/products/:id/create_sale' => 'vendors#create_sale'
 
-  post 'vendors/create_sale' => 'vendors#create_sale'
+  post 'vendors/:id/products/:id/create_sale' => 'vendors#create_sale', as: 'vendor_create_sale'
 
-  get 'vendors/show_sale' => 'vendors#show_sale'
+  get 'vendors/:id/products/:show_sale' => 'vendors#show_sale'
 
   get 'vendors/show_all_sales' => 'vendors#show_all_sales'
 
