@@ -155,8 +155,10 @@ class MarketsController < ApplicationController
 
   def vendor_destroy
     @myvendor = findVendor
-    if @myvendor != nil
-      @myvendor.destroy
+    @mymarket = findMarket
+    @market_vendor_join = findMarketVendorClean
+    if @market_vendor_join != nil
+      @market_vendor_join.destroy
       redirect_to market_show_path(@mymarket.id)
     end
   end
