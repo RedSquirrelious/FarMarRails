@@ -109,7 +109,7 @@ class MarketsController < ApplicationController
       @market_vendor_join.market_id = @mymarket.id
       @market_vendor_join.vendor_id = @myvendor.id
       @market_vendor_join.save
-      # redirect_to market_show_path
+      redirect_to market_show_path
     else
       @error = "Did not save successfully. Try again."
       @post_method = :post
