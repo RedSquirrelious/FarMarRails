@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   get 'vendors/:id/edit_product/:product_id' => 'vendors#edit_product', as: 'edit_product'
 
-  post 'vendors/:id/update_product/:product_id' => 'vendors#update_product', as: 'update_product'
+  put 'vendors/:id/update_product/:product_id' => 'vendors#update_product', as: 'update_product'
 
 
 
