@@ -9,6 +9,7 @@ class VendorsController < ApplicationController
 
   def show_vendor
     @myvendor = find_vendor
+    show_all_products
   end
 
   def new_product
@@ -27,40 +28,44 @@ class VendorsController < ApplicationController
   end
 
   def find_product
-    return Product.find_by_vendor_id(params[:id].to_i)
+    return Product.find(params[:product_id].to_i)
   end
 
   def show_product
+    @myvendor = find_vendor
     @myproduct = find_product
   end
 
   def show_all_products
-    @myvendor = find_vendor
-    @products = Product.where(vendor_id: @myvendor.id )
-    return @products
+    # @myvendor = find_vendor
+    @products = @myvendor.products
   end
 
   def update_product
-    if @myproduct == nil
-          render :file => 'public/404.html',
-              :status => :not_found
-    end
+    @myvendor = find_vendor
+    @myproduct = find_product
 
-    @product_name = params[:name]
-    @myproduct.save
-    redirect_to show_vendor
+    # if @myproduct == nil
+    #       render :file => 'public/404.html',
+    #           :status => :not_found
+    # end
+
+    # @myproduct.name = params[:name]
+    
+    # @myproduct.save
+      # redirect_to show_vendor_path
+    
   end
 
   def edit_product
     @myproduct = find_product
-    @product_creation_method = "post"
-    @product_method = :put
-    @post_path = products_update_path(@myproduct.id)
+    @post_method = :put
+    @post_path = update_product_path
     
-    if @myproduct == nil
-          render :file => 'public/404.html',
-              :status => :not_found
-    end
+    # if @myproduct == nil
+    #       render :file => 'public/404.html',
+    #           :status => :not_found
+    # end
   end
 
   def destroy_product
