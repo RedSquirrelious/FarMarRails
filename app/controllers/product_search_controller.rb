@@ -46,6 +46,26 @@ class ProductSearchController < ApplicationController
 
   end
 
+    def meat_search
+  	meat = ['chicken', 'beef']
+
+  	meat_array = meat.map do |v|
+  		define_type(v)
+  	end.flatten
+
+  	@meat_search = Market.joins(:vendors).merge(Vendor.joins(:products).merge(Product.where(id: meat_array.map(&:id)))).distinct
+  	end
+
+    def carbs_search
+  	carbs = ['bread', 'pretzel', 'burrito']
+
+  	carbs_array = carbs.map do |v|
+  		define_type(v)
+  	end.flatten
+
+  	@carbs_search = Market.joins(:vendors).merge(Vendor.joins(:products).merge(Product.where(id: carbs_array.map(&:id)))).distinct
+  	end  	
+
 end
 
 
