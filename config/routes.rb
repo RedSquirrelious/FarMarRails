@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get 'product_search/carbs_search' => 'product_search#carbs_search', as: 'carbs_search'
 
+  get 'product_search/fruit_search' => 'product_search#fruit_search', as: 'fruit_search'
 
   root to: 'landing#index'
 
