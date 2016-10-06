@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'product_search/index'
+
+  get 'product_search/show'
+
   root to: 'landing#index'
 
   get 'landing/index' => 'landing#index'
