@@ -7,4 +7,4 @@
 
 <%= button_to("Edit Product", edit_product_path(@myvendor.id, @myproduct.id), method: :get) %>
 
-<%= button_to("Delete", destroy_product_path(@myproduct.id), method: :delete, data: {confirm: "Are you sure?"}) %>
+<%= button_to("Delete", destroy_product_path(@myvendor.id, @myproduct.id), method: :delete, data: {confirm: "Are you sure?"}) %>

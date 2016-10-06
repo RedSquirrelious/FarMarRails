@@ -32,6 +32,7 @@ class VendorsController < ApplicationController
 
   def find_product
     return Product.find(params[:product_id].to_i)
+    #where(market_id: params[:id].to_i).where(vendor_id: params[:vendor_id].to_i).first
   end
 
   def show_product
@@ -55,10 +56,10 @@ class VendorsController < ApplicationController
     # end
 
     @myproduct.name = params[:product][:name]
-    
+
     @myproduct.save
       redirect_to show_vendor_path
-    
+
   end
 
   def edit_product
@@ -66,7 +67,7 @@ class VendorsController < ApplicationController
     @myproduct = find_product
     @post_method = :put
     @post_path = update_product_path
-    
+
     if @myproduct == nil
           render :file => 'public/404.html',
               :status => :not_found
@@ -74,11 +75,12 @@ class VendorsController < ApplicationController
   end
 
   def destroy_product
+    @myvendor = find_vendor
     @myproduct = find_product
-     
+
     if @myproduct != nil
         @myproduct.destroy
-        redirect_to show_vendor
+        redirect_to show_vendor_path(@myvendor.id)
     end
   end
 
@@ -98,7 +100,7 @@ class VendorsController < ApplicationController
 
   def find_sale
     return Sale.find(params[:id])
-  end 
+  end
 
   def show_sale
     @mysale = find_sale

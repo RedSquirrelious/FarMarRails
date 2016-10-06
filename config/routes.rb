@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
 
 
-  delete 'vendors/destroy_product' => 'vendors#destroy_product', as: 'destroy_product'
+  delete 'vendors/:id/:product_id/destroy_product' => 'vendors#destroy_product', as: 'destroy_product'
 
   get 'vendors/new_sale' => 'vendors#new_sale'
 
