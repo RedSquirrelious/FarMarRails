@@ -4,7 +4,11 @@ class MarketsController < ApplicationController
   end
 
   def findVendor
-    return Vendor.find(params[:id].to_i)
+    return Vendor.find(params[:vendor_id].to_i)
+  end
+  def findMarketVendorClean
+    return MarketVendorClean.where(market_id: params[:id].to_i).where(vendor_id: params[:vendor_id].to_i).first
+
   end
 
   def index
@@ -85,6 +89,7 @@ class MarketsController < ApplicationController
   end
 
   def vendor_show
+    @mymarket = findMarket
     @myvendor = findVendor
     @vendor_products = @myvendor.products
     @vendor_markets = @myvendor.markets
@@ -94,7 +99,7 @@ class MarketsController < ApplicationController
     @mymarket = findMarket
     @myvendor = Vendor.new
     @post_method = :post
-    @post_path = market_vendor_create_path
+    @post_path = market_vendor_create_path(@mymarket.id)
   end
 
   def vendor_create
@@ -109,21 +114,50 @@ class MarketsController < ApplicationController
       @market_vendor_join.market_id = @mymarket.id
       @market_vendor_join.vendor_id = @myvendor.id
       @market_vendor_join.save
-      redirect_to market_show_path
+      redirect_to market_show_path(@mymarket.id)
     else
       @error = "Did not save successfully. Try again."
       @post_method = :post
-      @post_path = market_vendor_update_path
-      render :new
+      @post_path = market_vendor_create_path(@mymarket.id)
+      render :vendor_new
     end
   end
 
   def vendor_edit
+    @mymarket = findMarket
+    @myvendor = findVendor
+    @post_method = :put
+    @post_path = market_vendor_update_path(@mymarket.id, @myvendor.id)
   end
 
   def vendor_update
+    @mymarket = findMarket
+    @params = params
+    @myvendor = findVendor
+    @myvendor.name = params[:vendor][:name]
+    @myvendor.num_employees = params[:vendor][:num_employees]
+
+    if @myvendor.save
+      @market_vendor_join = findMarketVendorClean
+      if (@market_vendor_join != nil)
+        @market_vendor_join.market_id = @mymarket.id
+        @market_vendor_join.vendor_id = @myvendor.id
+        @market_vendor_join.save
+      end
+      redirect_to market_show_path(@mymarket.id)
+    else
+      @error = "Did not save successfully. Try again."
+      @post_method = :put
+      @post_path = market_vendor_update_path(@mymarket.id, @myvendor.id)
+      render :vendor_edit
+    end
   end
 
   def vendor_destroy
+    @myvendor = findVendor
+    if @myvendor != nil
+      @myvendor.destroy
+      redirect_to market_show_path(@mymarket.id)
+    end
   end
 end

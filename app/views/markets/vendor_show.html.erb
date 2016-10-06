@@ -1,4 +1,6 @@
 <h1> <%= @myvendor.name %></h1>
+<p>Number of Employees: <%= @myvendor.num_employees %></p>
+
 
 <article>
   <h3> Product Offerings: </h3>
@@ -17,3 +19,8 @@
     </article>
   <% end %>
 </article>
+
+<p> <%= button_to "Edit", market_vendor_edit_path(@mymarket.id, @myvendor.id), method: :get %></p>
+<p> <%= button_to "Delete", market_vendor_destroy_path(@mymarket.id, @myvendor.id), method: :vendor_delete %></p>
+
+<!-- Is there a way to undo a delete??? -->
