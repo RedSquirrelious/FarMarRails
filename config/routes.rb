@@ -5,11 +5,11 @@ Rails.application.routes.draw do
 
   get 'vendors/show_vendor/:id' => 'vendors#show_vendor', as: 'show_vendor'
 
-  get 'vendors/new_product' => 'vendors#new'
+  get 'vendors/:id/new_product' => 'vendors#new_product', as: 'new_product'
 
-  get 'vendors/create_product' => 'vendors#create'
+  get 'vendors/create_product' => 'vendors#create_product'
 
-  post 'vendors/create_product' => 'vendors#create', as: 'create_product'
+  post 'vendors/:id/create_product' => 'vendors#create_product', as: 'create_product'
 
   get 'vendors/:id/show_product/:product_id' => 'vendors#show_product', as: 'show_product'
 
