@@ -38,8 +38,8 @@ class ProductSearchController < ApplicationController
   def seafood_search
   	seafood = ['fish', 'salmon']
 
-  	seafood_array = seafood.map do |v|
-  		define_type(v)
+  	seafood_array = seafood.map do |s|
+  		define_type(s)
   	end.flatten
 
   	@seafood_search = Market.joins(:vendors).merge(Vendor.joins(:products).merge(Product.where(id: seafood_array.map(&:id)))).distinct
@@ -49,8 +49,8 @@ class ProductSearchController < ApplicationController
 	def meat_search
 	  meat = ['chicken', 'beef']
 
-	  meat_array = meat.map do |v|
-	  	define_type(v)
+	  meat_array = meat.map do |m|
+	  	define_type(m)
 	  end.flatten
 
 	  @meat_search = Market.joins(:vendors).merge(Vendor.joins(:products).merge(Product.where(id: meat_array.map(&:id)))).distinct
@@ -59,8 +59,8 @@ class ProductSearchController < ApplicationController
 	def carbs_search
 	  carbs = ['bread', 'pretzel', 'burrito']
 
-	  carbs_array = carbs.map do |v|
-	  	define_type(v)
+	  carbs_array = carbs.map do |c|
+	  	define_type(c)
 	  end.flatten
 
 	  @carbs_search = Market.joins(:vendors).merge(Vendor.joins(:products).merge(Product.where(id: carbs_array.map(&:id)))).distinct
@@ -69,14 +69,22 @@ class ProductSearchController < ApplicationController
 	def fruit_search
 	  fruit = ['fruit', 'apple']
 
-	  fruit_array = fruit.map do |v|
-	  	define_type(v)
+	  fruit_array = fruit.map do |f|
+	  	define_type(f)
 	  end.flatten
 
 	  @fruit_search = Market.joins(:vendors).merge(Vendor.joins(:products).merge(Product.where(id: fruit_array.map(&:id)))).distinct
 	end  
 
+	def sweets_search
+	  sweets = ['honey', 'chocolate']
 
+	  sweets_array = sweets.map do |s|
+	  	define_type(s)
+	  end.flatten
+
+	  @sweets_search = Market.joins(:vendors).merge(Vendor.joins(:products).merge(Product.where(id: sweets_array.map(&:id)))).distinct
+	end  
 end
 
 
