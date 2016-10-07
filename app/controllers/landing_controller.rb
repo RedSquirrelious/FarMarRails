@@ -14,4 +14,15 @@ class LandingController < ApplicationController
   	
   	return @types
   end
+
+  def rotate_quotes
+    @quotes.sample
+  end
+
+  def rotate_celebrities
+    celebrity = @celebrities.sample
+    @celebrity_img = celebrity[0]
+    @celebrity_name = celebrity[1]
+    return @celebrity_img, @celebrity_name
+  end
 end

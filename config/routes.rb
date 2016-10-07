@@ -1,8 +1,24 @@
 Rails.application.routes.draw do
 
+
   root to: 'landing#index'
 
   get 'landing/index' => 'landing#index', as: 'landing'
+
+
+  
+  get 'random_quote/index'
+
+  get 'random_quote/show' => 'random_quote#show'
+
+  get 'random_celebrity_sighting/index'
+
+  get 'random_celebrity_sighting/show'
+
+
+  get 'random_celebrity_sightings/index'
+
+  get 'random_celebrity_sightings/show' => 'random_celebrity_sightings#show', as: 'random_celebrity_sightings'
 
 
   get 'product_search/index'
