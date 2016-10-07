@@ -131,7 +131,7 @@ class VendorsController < ApplicationController
     @mysale.vendor_id = @myproduct.vendor_id
 
     if @mysale.save
-      redirect_to show_vendor_path(@mysale.vendor_id) 
+      redirect_to show_vendor_path(@mysale.vendor_id)
     else
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :post

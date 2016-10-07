@@ -2,9 +2,12 @@
 
 <%= @myproduct.name %>
 <%= form_for @myproduct, method: @post_method, url: @post_path do |f| %>
+<div class="form_attribute">
 	<%= f.label :name %>
 	<%= f.text_field :name %>
+	</div>
 
+	<div class="form_attribute">
 	<%= f.submit %>
-
+</div>
 <% end %>

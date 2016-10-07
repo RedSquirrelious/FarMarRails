@@ -1,7 +1,5 @@
 <div class="market_container">
   <h1>Choose Your Market</h1>
-
-  <p>  <%= button_to "Add Market", {controller: 'markets', action: 'new'}, {path: 'market_new', method: :get} %></p>
   <div class="all_markets_list">
   <% @markets.each do |market| %>
     <article>
@@ -10,4 +8,5 @@
     </article>
   <% end %>
   </div>
+  <p class="add_market_button">  <%= button_to "Add Market", {controller: 'markets', action: 'new'}, {path: 'market_new', method: :get} %></p>
 </div>

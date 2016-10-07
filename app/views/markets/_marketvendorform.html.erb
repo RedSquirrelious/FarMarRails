@@ -3,11 +3,18 @@
   method: @post_method,
   url: @post_path do |f| %>
   <!-- <%= @error if @error %> -->
+
+  <div class="form_attribute">
   <%= f.label :name %>
   <%= f.text_field :name %>
+  </div>
 
+  <div class="form_attribute">
   <%= f.label :num_employees %>
   <%= f.text_field :num_employees %>
+  </div>
 
+  <div class="form_attribute">
   <%= f.submit %>
+  </div>
   <% end %>
