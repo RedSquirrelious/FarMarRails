@@ -1,0 +1,2 @@
+module RandomQuoteHelper
+end

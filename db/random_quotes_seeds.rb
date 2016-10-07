@@ -1,9 +1,9 @@
-@quotes = [
-"Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year.", 
+module RandomQuotes
+QUOTES = ["Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year.", 
 
-"And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.",
+	"And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.", 
 
-"You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.",
+  "You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.",
 
 "Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.",
 
@@ -22,11 +22,9 @@
 
 "When you grow up you'll be put in a container called a cubicle. The bleak oppressiveness will warp your spine and destroy your capacity to feel joy. Luckily you'll have a boss like me to motivate you with something called fear.",
 
-"An optimist is simply a pessimist with no job experience.
-We're a planet of nearly six billion ninnies living in a civilization that was designed by a few thousand amazingly smart deviants.",
+"An optimist is simply a pessimist with no job experience. We're a planet of nearly six billion ninnies living in a civilization that was designed by a few thousand amazingly smart deviants.",
 
-"Let's form proactive synergy restructuring teams.
-All of your co-workers are fools. You must learn to pity and tolerate them.",
+"Let's form proactive synergy restructuring teams. All of your co-workers are fools. You must learn to pity and tolerate them.",
 
 "If you give a man a fish he will eat for a day. But if you teach a man to fish he will buy an ugly hat. And if you talk about fish to a starving man then you are a consultant.",
 
@@ -40,8 +38,10 @@ All of your co-workers are fools. You must learn to pity and tolerate them.",
 
 "Cray celiac banh mi, direct trade drinking vinegar asymmetrical messenger bag pickled taxidermy wayfarers pabst truffaut. Ethical air plant narwhal whatever heirloom, migas hammock ramps ennui synth keytar.",
 
-"Pour-over gochujang pabst, selvage butcher pitchfork snackwave poke vape roof party disrupt yuccie activated charcoal. Pickled marfa listicle brunch." 
+"Pour-over gochujang pabst, selvage butcher pitchfork snackwave poke vape roof party disrupt yuccie activated charcoal. Pickled marfa listicle brunch.", 
 
 "Green juice tumblr flexitarian hexagon, roof party retro cold-pressed edison bulb. Bushwick yuccie blue bottle keytar heirloom fanny pack. Activated charcoal thundercats artisan, succulents hell of skateboard neutra vaporware selvage.",
 
-"Fap la croix you probably haven't heard of them chia, aesthetic migas hashtag tilde. Prism vegan leggings ethical lo-fi messenger bag, pinterest four dollar toast man braid cray semiotics gastropub."]
+"Fap la croix you probably haven't heard of them chia, aesthetic migas hashtag tilde. Prism vegan leggings ethical lo-fi messenger bag, pinterest four dollar toast man braid cray semiotics gastropub."
+]
+end

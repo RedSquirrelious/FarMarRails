@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
   
+  get 'random_quote/index'
+
+  get 'random_quote/show' => 'random_quote#show'
+
+  get 'random_celebrity_sighting/index'
+
+  get 'random_celebrity_sighting/show'
+
+
   get 'random_celebrity_sightings/index'
 
   get 'random_celebrity_sightings/show' => 'random_celebrity_sightings#show', as: 'random_celebrity_sightings'
