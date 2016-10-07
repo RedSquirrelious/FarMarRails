@@ -94,7 +94,7 @@
 
 
 header {
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   width: 100%;
 }
 
@@ -160,7 +160,7 @@ main p {
 footer {
   display: block;
   width: 100vw;
-  border: 1px solid black;
+  border-top: 1px solid black;
   margin-top: 5vh;
   background-color: white;
   color: black;
