@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'random_celebrity_sightings/index'
+
+  get 'random_celebrity_sightings/show'
+
   get 'product_search/index'
 
   get 'product_search/show' => 'product_search#show', as: 'product_search'
