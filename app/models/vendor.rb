@@ -4,6 +4,6 @@ class Vendor < ActiveRecord::Base
   has_many :products
   has_many :sales
 
-  validates :name, presence: true
-  validates :num_employees, presence: true
+  # validates :name, presence: true
+  # validates :num_employees, presence: true
 end
