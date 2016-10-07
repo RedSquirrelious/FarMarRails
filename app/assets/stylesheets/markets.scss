@@ -1,3 +1,50 @@
 // Place all the styles related to the markets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.market_container {
+  width: 80vw;
+  height: 70vh;
+  margin: 3vh auto;
+  border: 1px solid black;
+}
+
+.all_markets_list {
+  width: 90%;
+  height: 80%;
+  position: relative;
+  overflow: auto;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.vendor_container {
+  width: 80vw;
+  height: 40vh;
+  margin: 3vh auto;
+  border: 1px solid black;
+}
+.vendors_for_market {
+  border: 1px solid black;
+  width: 90%;
+  height: 80%;
+  position: relative;
+  overflow: auto;
+  margin: auto;
+ }
+
+.address h3 {
+  font-size: 2.3rem;
+}
+
+.address p {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.address .vendor_container h3 {
+  font-size: 2.3rem;
+}
+.address .vendors_for_market p {
+  font-size: 2rem;
+}
