@@ -44,7 +44,7 @@ class VendorsController < ApplicationController
     @myproduct.vendor_id = @myvendor.id
 
     if @myproduct.save
-      redirect_to show_vendor(@myvendor.id)
+      redirect_to show_vendor_path(@myvendor.id)
     else
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :post
@@ -82,7 +82,7 @@ class VendorsController < ApplicationController
 
 
     if @myproduct.save
-      redirect_to show_vendor(@myvendor.id)
+      redirect_to show_vendor_path(@myvendor.id)
     else
       @error = "Did not save successfully. Try again. \nAll fields must be filled and address must be unique!"
       @post_method = :post
