@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get 'product_search/fruit_search' => 'product_search#fruit_search', as: 'fruit_search'
 
+  get 'product_search/sweets_search' => 'product_search#sweets_search', as: 'sweets_search'
+
   root to: 'landing#index'
 
   get 'landing/index' => 'landing#index'
