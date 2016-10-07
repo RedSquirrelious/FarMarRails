@@ -176,3 +176,15 @@ footer p {
   padding: 2vh 0;
   bottom: 0;
 }
+
+.celebrity_quote {
+  color: green;
+}
+
+.celebrity_name {
+  color: purple;
+}
+
+.celebrity_image {
+  height: 200px;
+}

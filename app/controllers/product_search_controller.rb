@@ -3,21 +3,7 @@ class ProductSearchController < ApplicationController
   end
 
   def show
-  	# @products = Product.all
 
-  	# @types = []
-
-  	# @products.each do |product|
-  	# 	type = product.name.to_s.split(/\W+/)
-  	# 	unless type[1] == nil
-  	# 		@types << type[1]
-  	# 	end
-  	# end
-  	# 	@types = @types.uniq
-  	# return @types
-  	# raise
-
-  	veggie_search
   end
 
   def define_type(name)
@@ -62,7 +48,8 @@ class ProductSearchController < ApplicationController
 	  carbs_array = carbs.map do |c|
 	  	define_type(c)
 	  end.flatten
-
+      rotate_image
+      rotate_quote
 	  @carbs_search = Market.joins(:vendors).merge(Vendor.joins(:products).merge(Product.where(id: carbs_array.map(&:id)))).distinct
 	end  	
 
@@ -85,6 +72,17 @@ class ProductSearchController < ApplicationController
 
 	  @sweets_search = Market.joins(:vendors).merge(Vendor.joins(:products).merge(Product.where(id: sweets_array.map(&:id)))).distinct
 	end  
+
+  def rotate_image
+    celebrity = RandomCelebritySighting.all.sample
+    @celebrity_image = celebrity.image_url
+    @celebrity_name = celebrity.name
+    return @celebrity_image, @celebrity_name
+  end
+
+  def rotate_quote
+    @quote = RandomQuote.all.sample.quote
+  end
 end
 
 
