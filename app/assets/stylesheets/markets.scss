@@ -6,7 +6,7 @@
   width: 80vw;
   height: 70vh;
   margin: 3vh auto;
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 
 .all_markets_list {
@@ -14,7 +14,7 @@
   height: 80%;
   position: relative;
   overflow: auto;
-  border: 1px solid black;
+  border-top: 1px solid black;
   margin: auto;
 }
 
@@ -35,10 +35,10 @@
   width: 80vw;
   height: 65vh;
   margin: 5vh auto 3vh auto;
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 .vendors_for_market {
-  border: 1px solid black;
+  border-top: 1px solid black;
   width: 90%;
   height: 75%;
   position: relative;

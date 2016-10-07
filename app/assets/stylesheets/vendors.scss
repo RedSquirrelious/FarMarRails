@@ -5,7 +5,7 @@
   width: 80vw;
   height: 70vh;
   margin: 3vh auto;
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 
 .all_vendor_index_list {
@@ -13,7 +13,7 @@
   height: 80%;
   position: relative;
   overflow: auto;
-  border: 1px solid black;
+  border-top: 1px solid black;
   margin: auto;
 }
 
@@ -58,7 +58,7 @@ p.sale_note {
 
 .product_name {
   font-size: 2rem;
-  
+
 }
 
 .sale_form {
