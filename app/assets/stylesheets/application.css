@@ -192,26 +192,15 @@ footer p {
   /*padding: 34.37% 0 0 0;*/
 }
 
-.img.resize {
-  width: 400px;
-  height: auto;
-}
-
-.celebrity_image.resize {
-  width: 400px;
-  height: auto;
+.celebrity_image {
+  width: 85%;
   display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .celebrity_name {
   color: purple;
   margin: auto;
-  display: inline-block;
+  display: block;
 }
 
 .celebrity_quote {
