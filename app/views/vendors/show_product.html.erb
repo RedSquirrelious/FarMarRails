@@ -8,3 +8,5 @@
 <%= button_to("Edit Product", edit_product_path(@myvendor.id, @myproduct.id), method: :get) %>
 
 <%= button_to("Delete", destroy_product_path(@myvendor.id, @myproduct.id), method: :delete, data: {confirm: "Are you sure?"}) %>
+
+<%= render partial: 'random_celebrity_sighting/random_celebrity_sighting' %>
