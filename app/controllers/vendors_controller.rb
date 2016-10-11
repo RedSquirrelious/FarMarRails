@@ -17,15 +17,19 @@ class VendorsController < ApplicationController
 
     @total_sales = 0
     @allsales.each do |sale|
-      @total_sales += sale.amount
+    @total_sales += sale.amount
     end
 
     @markets = @myvendor.markets
+    rotate_image
+    rotate_quote
   end
 
   def show_market_from_vendor
     @mymarket = find_market
     @market_vendors = @mymarket.vendors
+    rotate_image
+    rotate_quote
   end
 
   def new_product
