@@ -182,12 +182,16 @@ footer p {
   height: auto;
 }
 
+.random h3 {
+  margin: auto;
+}
+
 .random_celebrity {
   display: block;
-    object-fit: contain;
+/*    object-fit: contain;*/
   /*width: 100%;*/
   height: auto;
-  position: relative;
+  /*position: relative;*/
   /*overflow:hidden;*/
   /*padding: 34.37% 0 0 0;*/
 }
@@ -204,7 +208,8 @@ footer p {
 }
 
 .celebrity_quote {
-  color: green;
   margin: auto;
   display: block;
+  font-style: italic;
+  float: left;
 }
