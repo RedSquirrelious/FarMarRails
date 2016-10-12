@@ -9,7 +9,7 @@ module RandomCelebritySightings
 	["https://static01.nyt.com/images/2016/05/12/arts/12OPRAH/12OPRAH-master768.jpg", "Oprah Winfrey"],
 	["http://static.oprah.com/images/o2/201507/201507-omag-wikfs-949x534.jpg", "Oprah Winfrey"],
 	["http://static.oprah.com/images/201302/omag/201302-omag-wikfs-600x411.jpg", "Oprah Winfrey"],
-	["http://static.oprah.com/images/tows/201104/20110420-rob-lowe-1-300x205.jpg", "Oprah Winfrey"],
+	["http://static.oprah.com/images/tows/201104/20110420-rob-lowe-1-300x205.jpg", "Rob Lowe"],
 	["http://static.oprah.com/images/201206/omag/201206-omag-maggie-gyllenhaal-300x205.jpg", "Maggie Gyllenhaal"],
 	["http://static.oprah.com/images/tows/201104/20110427-tows-obamas-1-300x205.jpg", "America's First Family"],
 	["https://upload.wikimedia.org/wikipedia/commons/b/ba/Rob_Lowe_2012_Shankbone_2.JPG", "Rob Lowe"],
